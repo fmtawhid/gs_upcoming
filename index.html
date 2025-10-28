@@ -401,63 +401,91 @@
   <!-- REVIEWS (continuous loop) -->
   <section id="reviews" class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center">
+      <!-- Heading -->
+      <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 fade-up">Words from those we've empowered</h2>
-        <p class="mt-3 text-gray-600 fade-up delay-1">Real stories from clients  the measurable impact of our tailored digital solutions.</p>
+        <p class="mt-3 text-gray-600 fade-up delay-1">Real stories from clients — the measurable impact of our tailored digital solutions.</p>
       </div>
 
-      <div class="mt-10 relative">
+      <!-- Carousel -->
+      <div class="relative">
         <div class="overflow-hidden">
-          <!-- We will clone items in JS to create a seamless loop -->
-          <div id="carousel" class="flex">
-            <article class="min-w-full md:min-w-0 md:flex-1 bg-white border rounded-2xl p-8 shadow mx-2">
+          <div id="carousel" class="flex gap-4 transition-transform duration-500">
+            <!-- Review Item -->
+            <article class="flex-shrink-0 w-full md:w-1/3 bg-white border rounded-2xl p-8 shadow">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]"><i class="fa-solid fa-store"></i></div>
-                <div>
-                  <div class="font-semibold">Bhola Mart</div>
-                  <div class="text-sm text-gray-500">E-commerce  Founder</div>
+                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]">
+                  <i class="fa-solid fa-store"></i>
                 </div>
-                <div class="ml-auto text-yellow-400"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i></div>
+                <div>
+                  <div class="font-semibold text-gray-900">Bhola Mart</div>
+                  <div class="text-sm text-gray-500">E-commerce — Founder</div>
+                </div>
+                <div class="ml-auto text-yellow-400 flex gap-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
               </div>
-              <p class="mt-4 text-gray-700 italic text-lg">Growsoft transformed our online journey. From development to branding  everything was flawless. Our sales improved 40% within 3 months.</p>
+              <p class="mt-4 text-gray-700 italic text-lg">Growsoft transformed our online journey. From development to branding — everything was flawless. Our sales improved 40% within 3 months.</p>
             </article>
 
-            <article class="min-w-full md:min-w-0 md:flex-1 bg-white border rounded-2xl p-8 shadow mx-2">
+            <article class="flex-shrink-0 w-full md:w-1/3 bg-white border rounded-2xl p-8 shadow">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]"><i class="fa-solid fa-laptop-code"></i></div>
-                <div>
-                  <div class="font-semibold">Tech IT LLC</div>
-                  <div class="text-sm text-gray-500">Software Company  CEO</div>
+                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]">
+                  <i class="fa-solid fa-laptop-code"></i>
                 </div>
-                <div class="ml-auto text-yellow-400"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+                <div>
+                  <div class="font-semibold text-gray-900">Tech IT LLC</div>
+                  <div class="text-sm text-gray-500">Software Company — CEO</div>
+                </div>
+                <div class="ml-auto text-yellow-400 flex gap-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
               </div>
-              <p class="mt-4 text-gray-700 italic text-lg">Outstanding experience with Growsoft. Their strategy and execution helped us launch a new product on time and hit our user targets.</p>
+              <p class="mt-4 text-gray-700 italic text-lg">Outstanding experience with Growsoft. Their strategy and execution helped us launch a new product on time and hit our user targets.</p>
             </article>
 
-            <article class="min-w-full md:min-w-0 md:flex-1 bg-white border rounded-2xl p-8 shadow mx-2">
+            <article class="flex-shrink-0 w-full md:w-1/3 bg-white border rounded-2xl p-8 shadow">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]"><i class="fa-solid fa-briefcase"></i></div>
-                <div>
-                  <div class="font-semibold">Apex Traders</div>
-                  <div class="text-sm text-gray-500">Retail  Manager</div>
+                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]">
+                  <i class="fa-solid fa-briefcase"></i>
                 </div>
-                <div class="ml-auto text-yellow-400"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i></div>
+                <div>
+                  <div class="font-semibold text-gray-900">Apex Traders</div>
+                  <div class="text-sm text-gray-500">Retail — Manager</div>
+                </div>
+                <div class="ml-auto text-yellow-400 flex gap-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
               </div>
-              <p class="mt-4 text-gray-700 italic text-lg">Professional, creative and result-oriented  Growsoft improved our conversions and user experience significantly.</p>
+              <p class="mt-4 text-gray-700 italic text-lg">Professional, creative and result-oriented — Growsoft improved our conversions and user experience significantly.</p>
             </article>
           </div>
         </div>
 
-        <!-- controls (still keep manual controls) -->
-        <div class="absolute inset-y-0 left-0 flex items-center">
-          <button id="prevBtn" class="p-3 bg-white border rounded-full shadow ml-2 hover:bg-gray-50" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center">
-          <button id="nextBtn" class="p-3 bg-white border rounded-full shadow mr-2 hover:bg-gray-50" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
+        <!-- Carousel Controls -->
+        <button id="prevBtn" class="absolute top-1/2 left-0 -translate-y-1/2 p-3 bg-white border rounded-full shadow hover:bg-gray-50">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-0 -translate-y-1/2 p-3 bg-white border rounded-full shadow hover:bg-gray-50">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </section>
+
+
 
   <!-- FAQ (smooth accordion) -->
   <section id="faq" class="py-20">
@@ -560,7 +588,7 @@
       </div>
     </div>
 
-    <div class="mt-12 text-center text-sm text-gray-500">� <span id="year"></span> Growsoft  All rights reserved.</div>
+    <div class="mt-12 text-center text-sm text-gray-500">� <span id="year"></span> Growsoft  All rights reserved.</div>
   </footer>
 
   <!-- SCRIPTS -->
