@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Growsoft  Build Your Brand with Confidence & Creativity</title>
+
+  <!-- SEO meta -->
+  <meta name="description" content="Growsoft: End-to-end digital agency in Dhaka. Web & software development, digital marketing, SEO, social media, graphic design, automation & AI integrations. Book a free consultation." />
+  <meta name="keywords" content="Growsoft, digital agency, web development, software development, digital marketing, SEO, social media, graphic design, automation, AI" />
+  <meta name="author" content="Growsoft" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Growsoft  Build Your Brand with Confidence & Creativity" />
+  <meta property="og:description" content="End-to-end digital solutions: websites, apps, marketing, SEO & AI integrations. Book a free consultation." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thegrowsoft.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Organization JSON-LD (user provided, integrated) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GrowSoft",
+      "url": "https://www.thegrowsoft.com",
+      "logo": "https://www.thegrowsoft.com/images/logo.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+8801603747235",
+        "contactType": "Customer Service",
+        "areaServed": "BD",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://www.facebook.com/thegrowsoft",
+        "https://twitter.com/TheGrowSoft",
+        "https://www.linkedin.com/company/thegrowsoft/",
+        "https://www.youtube.com/@GrowSoft0"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Our Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Development",
+              "url": "https://thegrowsoft.com/web-development",
+              "description": "Professional website and web app development using Laravel, Django, and WordPress."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digital Marketing",
+              "url": "https://thegrowsoft.com/social-media",
+              "description": "We offer comprehensive digital marketing services including SEO, social media management, paid advertising, content marketing, and more to help businesses grow online."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ranking Service",
+              "url": "https://thegrowsoft.com/seo",
+              "description": "Improve your website's visibility on Google with our advanced SEO services including on-page optimization, backlink building, technical SEO, and keyword strategy tailored to boost organic traffic."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Graphics Design & Branding",
+              "url": "https://www.thegrowsoft.com/graphic",
+              "description": "Professional graphics design, brand identity creation, and visual storytelling for businesses. Includes logo design, social media creatives, UI/UX, and full branding packages."
+            }
+          }
+        ]
+      }
+    }
+  </script>
+
+  <!-- Tailwind CDN + Font Awesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <!-- Animate.css for nice entry animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    :root{
+      --brand: rgb(79 70 229 / var(--tw-text-opacity, 1));
+    }
+
+    /* Primary button utility */
+    .btn-primary {
+      background-color: var(--brand);
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+    /* Primary outline */
+    .btn-outline {
+      border: 2px solid var(--brand);
+      color: var(--brand);
+      background: transparent;
+    }
+    .btn-outline:hover { background: rgba(79,70,229,0.06); }
+
+    /* Animations */
+    .fade-up { transform: translateY(12px); opacity:0; animation: fadeUp .6s forwards; }
+    .fade-up.delay-1 { animation-delay:.10s; }
+    .fade-up.delay-2 { animation-delay:.22s; }
+    .fade-up.delay-3 { animation-delay:.34s; }
+    @keyframes fadeUp { to { transform: translateY(0); opacity:1; } }
+
+    .zoom-in { transform: scale(.98); opacity:0; animation: zoomIn .7s forwards; }
+    @keyframes zoomIn { to { transform: scale(1); opacity:1; } }
+
+    /* Decorative blobs */
+    .blob { position: absolute; filter: blur(28px); opacity: .45; z-index: 0; pointer-events: none; }
+
+    /* Carousel transition - we'll animate by JS */
+    #carousel { display:flex; gap:1.25rem; transition: transform .6s linear; will-change: transform; }
+
+    /* mobile menu */
+    .mobile-menu { transform: translateY(-10px); opacity:0; transition: all .25s ease; }
+    .mobile-menu.open { transform: translateY(0); opacity:1; }
+
+    /* FAQ smooth collapse */
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .25s ease; }
+    .accordion-item.open .accordion-content { padding-top: .75rem; padding-bottom: .75rem; }
+
+    /* focus ring */
+    a:focus, button:focus { outline: 3px solid rgba(99,102,241,0.14); outline-offset: 3px; }
+
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- PAGE LOADER -->
+  <div id="page-loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-700">
+    <div class="relative flex flex-col items-center">
+      <div class="w-16 h-16 border-[5px] border-t-transparent border-[var(--brand)] rounded-full animate-spin"></div>
+      <div class="mt-6 flex items-center gap-2 text-[var(--brand)] font-bold text-xl tracking-wide animate-pulse">
+        <i class="fa-solid fa-rocket text-2xl"></i>
+        <span>Growsoft</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-extrabold" aria-label="Growsoft home" style="background:linear-gradient(90deg,#7c3aed,#06b6d4); -webkit-background-clip:text; color:transparent;">Growsoft</a>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+          <a href="#home" class="hover:text-[var(--brand)] transition">Home</a>
+
+          <!-- Services with submenu -->
+          <div class="relative menu-group">
+            <button class="flex items-center gap-2 hover:text-[var(--brand)]" aria-expanded="false">Services <i class="fa-solid fa-chevron-down text-xs"></i></button>
+            <div class="submenu absolute left-0 mt-3 w-64 bg-white border rounded-lg shadow-lg opacity-0 transform translate-y-2 pointer-events-none transition-all">
+              <ul class="p-3 grid gap-1">
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-globe text-[var(--brand)] w-5"></i> Website Development</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-code text-[var(--brand)] w-5"></i> Software Development</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-brands fa-facebook text-[var(--brand)] w-5"></i> Social Media Marketing</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-chart-line text-[var(--brand)] w-5"></i> Digital Marketing</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-pen-nib text-[var(--brand)] w-5"></i> Graphic Design</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-robot text-[var(--brand)] w-5"></i> AI Integrations</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-cogs text-[var(--brand)] w-5"></i> Automation</a></li>
+                <li><a href="#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-magnifying-glass text-[var(--brand)] w-5"></i> Google Ranking (SEO)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="#about" class="hover:text-[var(--brand)]">About Us</a>
+          <a href="#contact" class="hover:text-[var(--brand)]">Contact Us</a>
+        </div>
+
+        <!-- Right actions -->
+        <div class="flex items-center gap-3">
+          <a href="#book" class="px-4 py-2 rounded-lg font-semibold btn-primary hidden md:inline-flex items-center gap-2"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+
+          <!-- mobile menu button -->
+          <button id="mobileToggle" class="md:hidden p-2 text-gray-600 rounded-md hover:bg-gray-100" aria-label="Open mobile menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- MOBILE MENU (works) -->
+    <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+      <div class="px-6 py-4 space-y-3">
+        <a href="#home" class="block py-2">Home</a>
+
+        <div>
+          <button data-acc="services" class="w-full text-left flex items-center justify-between py-2">
+            Services <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div data-panel="services" class="pl-4 hidden">
+            <a href="#services" class="block py-2">Website Development</a>
+            <a href="#services" class="block py-2">Software Development</a>
+            <a href="#services" class="block py-2">Digital Marketing</a>
+            <a href="#services" class="block py-2">SEO</a>
+            <a href="#services" class="block py-2">Graphic Design</a>
+            <a href="#services" class="block py-2">AI & Automation</a>
+          </div>
+        </div>
+
+        <a href="#about" class="block py-2">About Us</a>
+        <a href="#contact" class="block py-2">Contact Us</a>
+        <a href="mailto:contact@thegrowsoft.com" class="block py-2 font-semibold btn-primary text-center rounded-md">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO (image, not video) -->
+  <section id="home" class="relative overflow-hidden pt-24 pb-20">
+    <div class="blob -left-24 top-8 w-[360px] h-[360px] rounded-[48%] bg-gradient-to-r from-indigo-400 to-teal-300" aria-hidden="true"></div>
+    <div class="blob -right-20 top-36 w-[260px] h-[260px] rounded-[50%] bg-gradient-to-r from-orange-400 to-rose-400" aria-hidden="true"></div>
+
+    <!-- background image (subtle) -->
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1600&q=80"
+           alt="Creative digital marketing team brainstorming ideas"
+           class="w-full h-full object-cover opacity-10" />
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left -->
+        <div class="max-w-xl space-y-6">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 fade-up">Build Your Brand with <span style="color:var(--brand)">Confidence</span> & <span class="text-pink-600">Creativity</span></h1>
+          <p class="text-gray-700 text-lg fade-up delay-1">We craft stunning websites, impactful marketing campaigns, and intelligent AI-powered solutions that drive measurable growth for your business.</p>
+
+          <div class="flex flex-wrap gap-4 fade-up delay-2">
+            <a href="#services" class="inline-flex items-center gap-2 px-6 py-3 btn-primary rounded-full shadow-md"><i class="fa-solid fa-rocket"></i> Visit Services</a>
+            <a href="mailto:contact@thegrowsoft.com" class="inline-flex items-center gap-2 px-6 py-3 btn-outline rounded-full"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a>
+          </div>
+
+          <div class="flex gap-8 text-gray-600 mt-6 fade-up delay-3">
+            <div>
+              <div class="text-sm uppercase">Clients</div>
+              <div class="font-semibold">Bhola Mart, Tech IT LLC, Apex Traders</div>
+            </div>
+            <div>
+              <div class="text-sm uppercase">Location</div>
+              <div class="font-semibold">Ashulia & Banani, Dhaka</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: image card with subtle float animation -->
+        <div class="flex justify-center">
+          <div class="w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-gray-100 transform transition hover:-translate-y-2">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+                 alt="Marketing dashboard on a device - illustrative"
+                 class="w-full h-80 object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (8 items) -->
+  <section id="services" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 fade-up">Features that define our quality and reliability</h2>
+        <p class="mt-3 text-gray-600 max-w-2xl mx-auto fade-up delay-1">Custom solutions across web, software, marketing and AI to help your brand scale.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-globe"></i></div>
+          <h3 class="text-xl font-semibold">Website Development</h3>
+          <p class="mt-2 text-gray-600">Custom, responsive and SEO-friendly websites built for speed and conversions.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up delay-1">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-code"></i></div>
+          <h3 class="text-xl font-semibold">Software Development</h3>
+          <p class="mt-2 text-gray-600">Scalable web & mobile applications tailored to your workflows.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up delay-2">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-brands fa-facebook"></i></div>
+          <h3 class="text-xl font-semibold">Social Media Marketing</h3>
+          <p class="mt-2 text-gray-600">Creative campaigns to build engagement and brand loyalty.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up delay-3">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="text-xl font-semibold">Digital Marketing</h3>
+          <p class="mt-2 text-gray-600">Performance-driven strategies for leads, PPC and retention.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3 class="text-xl font-semibold">Graphic Design</h3>
+          <p class="mt-2 text-gray-600">Branding, logos and UI that reflect your identity.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up delay-1">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-robot"></i></div>
+          <h3 class="text-xl font-semibold">AI Integrations</h3>
+          <p class="mt-2 text-gray-600">Chatbots, automations & predictive tools to enhance UX.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up delay-2">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-cogs"></i></div>
+          <h3 class="text-xl font-semibold">Automation</h3>
+          <p class="mt-2 text-gray-600">Workflow automation to save time and reduce errors.</p>
+        </article>
+
+        <article class="p-8 bg-white border rounded-2xl shadow-sm hover:shadow-xl transition transform hover:-translate-y-2 fade-up delay-3">
+          <div class="text-[var(--brand)] text-5xl mb-4"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 class="text-xl font-semibold">Google Ranking (SEO)</h3>
+          <p class="mt-2 text-gray-600">Content & technical SEO to increase organic visibility.</p>
+        </article>
+      </div>
+
+      <div class="mt-12 rounded-2xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80" alt="Video production clapperboard - illustrative of media services" class="w-full object-cover h-64" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 fade-up">Empowering Brands for a Digital Future</h2>
+        <p class="mt-6 text-gray-700 text-lg leading-relaxed fade-up delay-1">At Growsoft we transform businesses through innovative technology and powerful digital solutions. We empower brands to thrive in the digital era by connecting them with their audience using smart marketing, web technology and creative content.</p>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 bg-white border rounded-lg shadow-sm">
+            <h4 class="font-semibold">Digital Branding</h4>
+            <p class="text-sm text-gray-600 mt-1">Crafting unique identities that build emotional connections.</p>
+          </div>
+          <div class="p-4 bg-white border rounded-lg shadow-sm">
+            <h4 class="font-semibold">Client-Centered Solutions</h4>
+            <p class="text-sm text-gray-600 mt-1">Tailored solutions focused on your goals and long-term growth.</p>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <a href="#" class="inline-flex items-center gap-3 px-6 py-3 btn-primary rounded-full shadow fade-up delay-2">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80" alt="Growsoft team collaborating on project" class="w-full object-cover h-80" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="whyus" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 fade-up">Why Choose Growsoft</h2>
+      <p class="mt-3 text-gray-600 max-w-2xl mx-auto fade-up delay-1">We combine creativity, technical excellence and data-driven thinking to deliver results that matter.</p>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-white border rounded-2xl shadow-sm hover:shadow-lg fade-up">
+          <i class="fa-solid fa-user-check text-[var(--brand)] text-3xl mb-3"></i>
+          <h4 class="font-semibold">Client-Centered</h4>
+          <p class="mt-2 text-gray-600">Clear communication and measurable goals.</p>
+        </div>
+        <div class="p-6 bg-white border rounded-2xl shadow-sm hover:shadow-lg fade-up delay-1">
+          <i class="fa-solid fa-lightbulb text-[var(--brand)] text-3xl mb-3"></i>
+          <h4 class="font-semibold">Quality & Innovation</h4>
+          <p class="mt-2 text-gray-600">Modern techniques and continuous improvement.</p>
+        </div>
+        <div class="p-6 bg-white border rounded-2xl shadow-sm hover:shadow-lg fade-up delay-2">
+          <i class="fa-solid fa-users text-[var(--brand)] text-3xl mb-3"></i>
+          <h4 class="font-semibold">Expert Team</h4>
+          <p class="mt-2 text-gray-600">Cross-disciplinary experts in design, dev & marketing.</p>
+        </div>
+        <div class="p-6 bg-white border rounded-2xl shadow-sm hover:shadow-lg fade-up delay-3">
+          <i class="fa-solid fa-headset text-[var(--brand)] text-3xl mb-3"></i>
+          <h4 class="font-semibold">24/7 Support</h4>
+          <p class="mt-2 text-gray-600">Reliable support and timely responses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS (continuous loop) -->
+  <section id="reviews" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 fade-up">Words from those we've empowered</h2>
+        <p class="mt-3 text-gray-600 fade-up delay-1">Real stories from clients  the measurable impact of our tailored digital solutions.</p>
+      </div>
+
+      <div class="mt-10 relative">
+        <div class="overflow-hidden">
+          <!-- We will clone items in JS to create a seamless loop -->
+          <div id="carousel" class="flex">
+            <article class="min-w-full md:min-w-0 md:flex-1 bg-white border rounded-2xl p-8 shadow mx-2">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]"><i class="fa-solid fa-store"></i></div>
+                <div>
+                  <div class="font-semibold">Bhola Mart</div>
+                  <div class="text-sm text-gray-500">E-commerce  Founder</div>
+                </div>
+                <div class="ml-auto text-yellow-400"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i></div>
+              </div>
+              <p class="mt-4 text-gray-700 italic text-lg">Growsoft transformed our online journey. From development to branding  everything was flawless. Our sales improved 40% within 3 months.</p>
+            </article>
+
+            <article class="min-w-full md:min-w-0 md:flex-1 bg-white border rounded-2xl p-8 shadow mx-2">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]"><i class="fa-solid fa-laptop-code"></i></div>
+                <div>
+                  <div class="font-semibold">Tech IT LLC</div>
+                  <div class="text-sm text-gray-500">Software Company  CEO</div>
+                </div>
+                <div class="ml-auto text-yellow-400"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></div>
+              </div>
+              <p class="mt-4 text-gray-700 italic text-lg">Outstanding experience with Growsoft. Their strategy and execution helped us launch a new product on time and hit our user targets.</p>
+            </article>
+
+            <article class="min-w-full md:min-w-0 md:flex-1 bg-white border rounded-2xl p-8 shadow mx-2">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]"><i class="fa-solid fa-briefcase"></i></div>
+                <div>
+                  <div class="font-semibold">Apex Traders</div>
+                  <div class="text-sm text-gray-500">Retail  Manager</div>
+                </div>
+                <div class="ml-auto text-yellow-400"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star"></i></div>
+              </div>
+              <p class="mt-4 text-gray-700 italic text-lg">Professional, creative and result-oriented  Growsoft improved our conversions and user experience significantly.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- controls (still keep manual controls) -->
+        <div class="absolute inset-y-0 left-0 flex items-center">
+          <button id="prevBtn" class="p-3 bg-white border rounded-full shadow ml-2 hover:bg-gray-50" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center">
+          <button id="nextBtn" class="p-3 bg-white border rounded-full shadow mr-2 hover:bg-gray-50" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (smooth accordion) -->
+  <section id="faq" class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-900 fade-up">Common questions about our digital solutions</h2>
+
+      <div class="mt-8 space-y-3">
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">What services does your company offer? <i class="fa-solid fa-plus"></i></button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Website & software development, digital marketing, branding and graphic design solutions for businesses.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">Do you work with international clients? <i class="fa-solid fa-plus"></i></button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Yes  we work with clients worldwide and support remote collaboration.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">How do you ensure the quality of your work? <i class="fa-solid fa-plus"></i></button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Quality through iterative reviews, testing and client feedback loops.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">What is your pricing model? <i class="fa-solid fa-plus"></i></button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Pricing depends on scope  custom proposals after initial consultation.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">Can you help with branding and social media management? <i class="fa-solid fa-plus"></i></button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Yes. We provide end-to-end branding and social media strategies and management.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK (no form) -->
+  <section id="book" class="py-20 bg-indigo-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 fade-up">Book an Appointment for Free Consultation</h2>
+      <p class="mt-3 text-gray-700 fade-up delay-1">Ready to grow? Click the button and we'll reach out to schedule a free, no-obligation consultation.</p>
+      <div class="mt-6 fade-up delay-2">
+        <a href="mailto:contact@thegrowsoft.com" class="inline-flex items-center gap-3 px-8 py-4 btn-primary rounded-full font-semibold shadow-lg">
+          <i class="fa-solid fa-calendar-plus"></i> Book Appointment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-200 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+      <div>
+        <h4 class="font-bold text-lg">Growsoft</h4>
+        <p class="mt-2 text-gray-400">Build your brand with confidence & creativity.</p>
+        <ul class="mt-4 text-sm text-gray-400 space-y-1">
+          <li><i class="fa-solid fa-location-dot mr-2 text-[var(--brand)]"></i> Ashulia & Banani, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-envelope mr-2 text-[var(--brand)]"></i> <a href="mailto:contact@thegrowsoft.com" class="hover:text-white">contact@thegrowsoft.com</a></li>
+          <li><i class="fa-solid fa-phone mr-2 text-[var(--brand)]"></i> +880 01603747235</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Services</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Website Development</a></li>
+          <li><a href="#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Software Development</a></li>
+          <li><a href="#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Digital Marketing</a></li>
+          <li><a href="#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Graphic Design</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Social Media</h5>
+        <div class="mt-3 flex gap-3">
+          <a href="#" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Other Pages</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#contact" class="hover:text-white">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center text-sm text-gray-500">© <span id="year"></span> Growsoft  All rights reserved.</div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Loader fade-out
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("page-loader");
+      setTimeout(() => {
+        loader.classList.add("opacity-0");
+        setTimeout(() => loader.style.display = "none", 700);
+      }, 400);
+    });
+
+    // Mobile menu toggle & submenu accordion in mobile
+    (function(){
+      const toggle = document.getElementById('mobileToggle');
+      const menu = document.getElementById('mobileMenu');
+      toggle && toggle.addEventListener('click', ()=>{
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden'); menu.classList.add('open');
+        } else {
+          menu.classList.add('hidden'); menu.classList.remove('open');
+        }
+      });
+
+      // mobile accordion panels
+      document.querySelectorAll('[data-acc]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const key = btn.getAttribute('data-acc');
+          const panel = document.querySelector(`[data-panel="${key}"]`);
+          if (!panel) return;
+          panel.classList.toggle('hidden');
+        });
+      });
+    })();
+
+    // Smooth submenu hover support for keyboard users (desktop)
+    document.querySelectorAll('.menu-group > button').forEach(btn => {
+      btn.addEventListener('focus', () => btn.parentElement.querySelector('.submenu').style.opacity = '1');
+      btn.addEventListener('blur', () => btn.parentElement.querySelector('.submenu').style.opacity = '0');
+    });
+
+    // Reviews carousel - continuous loop behaviour
+    (function(){
+      const carousel = document.getElementById('carousel');
+      const prev = document.getElementById('prevBtn');
+      const next = document.getElementById('nextBtn');
+      if (!carousel) return;
+
+      // Duplicate items to create seamless loop
+      const items = Array.from(carousel.children);
+      items.forEach(node => carousel.appendChild(node.cloneNode(true)));
+
+      let speed = 0.5; // pixels per frame (adjust for desired speed)
+      let pos = 0;
+      let rafId;
+
+      function frame(){
+        pos += speed;
+        // when scroll reaches half (original width), reset to 0 for seamless loop
+        const half = carousel.scrollWidth / 2;
+        if (pos >= half) pos = 0;
+        carousel.style.transform = `translateX(-${pos}px)`;
+        rafId = requestAnimationFrame(frame);
+      }
+      frame(); // start
+
+      // Manual controls: jump forward/backward by one card width
+      function visibleCount(){
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+      }
+
+      function cardWidth(){
+        const el = carousel.children[0];
+        if (!el) return 300;
+        return el.getBoundingClientRect().width + parseFloat(getComputedStyle(carousel).gap || 20);
+      }
+
+      next && next.addEventListener('click', ()=>{
+        pos += cardWidth();
+      });
+      prev && prev.addEventListener('click', ()=>{
+        pos = Math.max(0, pos - cardWidth());
+      });
+
+      // Pause on hover
+      carousel.addEventListener('mouseenter', ()=> speed = 0);
+      carousel.addEventListener('mouseleave', ()=> speed = 0.5);
+
+      // Resize safety
+      window.addEventListener('resize', ()=>{ /* nothing heavy here */ });
+    })();
+
+    // FAQ accordion (smooth)
+    (function(){
+      document.querySelectorAll('.accordion-item').forEach(item=>{
+        const btn = item.querySelector('button');
+        const content = item.querySelector('.accordion-content');
+        btn.addEventListener('click', ()=>{
+          const isOpen = item.classList.contains('open');
+          // close other items
+          document.querySelectorAll('.accordion-item.open').forEach(x=>{
+            if (x !== item) {
+              x.classList.remove('open');
+              x.querySelector('.accordion-content').style.maxHeight = null;
+              x.querySelector('button i').classList.remove('fa-minus'); x.querySelector('button i').classList.add('fa-plus');
+              x.querySelector('button').setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          if (isOpen) {
+            item.classList.remove('open');
+            content.style.maxHeight = null;
+            btn.querySelector('i').classList.remove('fa-minus'); btn.querySelector('i').classList.add('fa-plus');
+            btn.setAttribute('aria-expanded', 'false');
+          } else {
+            item.classList.add('open');
+            content.style.maxHeight = content.scrollHeight + "px";
+            btn.querySelector('i').classList.remove('fa-plus'); btn.querySelector('i').classList.add('fa-minus');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // if initial open flag present, open it
+        if (item.classList.contains('open')) {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    })();
+
+    // small accessibility: allow keyboard to close mobile menu with Escape
+    document.addEventListener('keydown', (e)=>{
+      if (e.key === 'Escape') {
+        const mobile = document.getElementById('mobileMenu');
+        if (mobile && !mobile.classList.contains('hidden')) {
+          mobile.classList.add('hidden');
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>
