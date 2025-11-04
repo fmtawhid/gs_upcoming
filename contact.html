@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact Growsoft – Start Your Project</title>
+
+  <!-- Canonical + Theme -->
+  <link rel="canonical" href="https://www.thegrowsoft.com/contact"/>
+  <meta name="theme-color" content="#4f46e5"/>
+  <link rel="icon" href="/favicon.ico"/>
+
+  <!-- SEO -->
+  <meta name="description" content="Contact Growsoft for websites, apps, digital marketing, SEO, automation & AI integrations. Book a free consultation."/>
+  <meta name="author" content="Growsoft"/>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Contact Growsoft – Start Your Project"/>
+  <meta property="og:description" content="Reach out for a free consultation. Web, software, marketing, SEO, and AI solutions."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.thegrowsoft.com/contact"/>
+  <meta property="og:image" content="https://www.thegrowsoft.com/og-image.jpg"/>
+  <meta property="og:site_name" content="Growsoft"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Contact Growsoft – Start Your Project"/>
+  <meta name="twitter:description" content="Tell us your goals—get a free consultation."/>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Tailwind + Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <style>
+    :root{ --brand: rgb(79 70 229 / 1); }
+    .btn-primary{ background:var(--brand); color:#fff; }
+    .btn-primary:hover{ filter:brightness(.95); transform:translateY(-2px); }
+    .btn-outline{ border:2px solid var(--brand); color:var(--brand); background:transparent; }
+    .btn-outline:hover{ background:rgba(79,70,229,.06); }
+
+    /* Animations (respect reduced motion) */
+    @media (prefers-reduced-motion:no-preference){
+      .fade-up{ transform:translateY(12px); opacity:0; animation:fadeUp .6s forwards; }
+      .delay-1{ animation-delay:.12s; } .delay-2{ animation-delay:.24s; } .delay-3{ animation-delay:.36s; }
+      @keyframes fadeUp{ to{ transform:none; opacity:1; } }
+    }
+
+    .submenu{ opacity:0; transform:translateY(8px); pointer-events:none; }
+    .submenu.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+
+    a:focus,button:focus,input:focus,select:focus,textarea:focus{
+      outline:3px solid rgba(99,102,241,.14); outline-offset:3px;
+    }
+    html{ scroll-behavior:smooth; }
+  </style>
+
+  <!-- JSON-LD: ContactPage + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Contact Growsoft",
+    "url":"https://www.thegrowsoft.com/contact",
+    "description":"Get in touch with Growsoft for projects and consultations.",
+    "isPartOf":{"@type":"WebSite","name":"Growsoft","url":"https://www.thegrowsoft.com"},
+    "about":{"@type":"Organization","name":"Growsoft","url":"https://www.thegrowsoft.com"}
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-800 bg-white">
+  <!-- Skip -->
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-sm px-3 py-2 rounded shadow">Skip to content</a>
+
+  <!-- Header (consistent) -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <a href="/" class="text-2xl font-extrabold" aria-label="Growsoft home" style="background:linear-gradient(90deg,#7c3aed,#06b6d4); -webkit-background-clip:text; color:transparent;">Growsoft</a>
+
+        <div class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+          <a href="/" class="hover:text-[var(--brand)]">Home</a>
+
+          <div class="relative menu-group">
+            <button type="button" class="flex items-center gap-2 hover:text-[var(--brand)]"
+              aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="services-menu" class="submenu absolute left-0 mt-3 w-72 bg-white border rounded-lg shadow-lg transition-all" role="menu" aria-label="Services">
+              <ul class="p-3 grid gap-1">
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-globe text-[var(--brand)] w-5"></i> Website Development</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-code text-[var(--brand)] w-5"></i> Software Development</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-brands fa-facebook text-[var(--brand)] w-5"></i> Social Media Marketing</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-chart-line text-[var(--brand)] w-5"></i> Digital Marketing</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-pen-nib text-[var(--brand)] w-5"></i> Graphic Design</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-robot text-[var(--brand)] w-5"></i> AI Integrations</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-cogs text-[var(--brand)] w-5"></i> Automation</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-magnifying-glass text-[var(--brand)] w-5"></i> Google Ranking (SEO)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="/about" class="hover:text-[var(--brand)]">About Us</a>
+          <a href="/contact" class="text-[var(--brand)] font-semibold">Contact Us</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="/#book" class="px-4 py-2 rounded-lg font-semibold btn-primary hidden md:inline-flex items-center gap-2"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          <button id="mobileToggle" type="button" class="md:hidden p-2 text-gray-600 rounded-md hover:bg-gray-100" aria-label="Open mobile menu" aria-controls="mobileMenu" aria-expanded="false">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+      <div class="px-6 py-4 space-y-3">
+        <a href="/" class="block py-2">Home</a>
+        <a href="/about" class="block py-2">About</a>
+        <div>
+          <button type="button" data-acc="services" class="w-full text-left flex items-center justify-between py-2" aria-controls="m-services" aria-expanded="false">
+            Services <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="m-services" data-panel="services" class="pl-4 hidden">
+            <a href="/#services" class="block py-2">Website Development</a>
+            <a href="/#services" class="block py-2">Software Development</a>
+            <a href="/#services" class="block py-2">Digital Marketing</a>
+            <a href="/#services" class="block py-2">SEO</a>
+            <a href="/#services" class="block py-2">Graphic Design</a>
+            <a href="/#services" class="block py-2">AI & Automation</a>
+          </div>
+        </div>
+        <a href="/contact" class="block py-2 font-semibold text-[var(--brand)]">Contact Us</a>
+        <a href="mailto:contact@thegrowsoft.com" class="block py-2 font-semibold btn-primary text-center rounded-md">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="content" class="relative overflow-hidden pt-20 pb-12">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=80"
+           alt="" class="w-full h-full object-cover opacity-10" width="1600" height="900" fetchpriority="high">
+    </div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="max-w-xl">
+          <p class="text-sm font-semibold tracking-wider uppercase text-[var(--brand)] fade-up">Contact</p>
+          <h1 class="mt-2 text-4xl md:text-5xl font-extrabold text-gray-900 fade-up delay-1">Let's build something great</h1>
+          <p class="mt-4 text-lg text-gray-700 fade-up delay-2">Tell us about your goals. We’ll reply within 1 business day.</p>
+
+          <div class="mt-6 space-y-2 text-gray-700 fade-up delay-3">
+            <div class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-[var(--brand)]"></i> Ashulia & Banani, Dhaka</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-phone text-[var(--brand)]"></i> +880 01603747235</div>
+            <div class="flex items-center gap-3"><i class="fa-solid fa-envelope text-[var(--brand)]"></i> <a class="underline" href="mailto:contact@thegrowsoft.com">contact@thegrowsoft.com</a></div>
+          </div>
+        </div>
+
+        <!-- Contact card quick CTA -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 p-6 bg-white">
+          <h2 class="text-xl font-semibold text-gray-900">Prefer email?</h2>
+          <p class="text-gray-600 mt-1">Click to open your email client with a prefilled subject.</p>
+          <a href="mailto:contact@thegrowsoft.com?subject=Project%20Inquiry%20from%20Website"
+             class="mt-4 inline-flex items-center gap-2 btn-outline px-5 py-3 rounded-full"><i class="fa-regular fa-paper-plane"></i> Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="py-8">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-10">
+      <!-- Left blurb -->
+      <aside class="lg:col-span-1">
+        <div class="p-6 bg-indigo-50 rounded-2xl border">
+          <h3 class="text-xl font-semibold text-gray-900">What to expect</h3>
+          <ul class="mt-3 space-y-2 text-gray-700">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--brand)] mt-1"></i> A quick discovery call</li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--brand)] mt-1"></i> Clear scope & timeline</li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--brand)] mt-1"></i> Transparent pricing</li>
+          </ul>
+          <p class="mt-4 text-sm text-gray-600">We can meet in Dhaka or remotely via Google Meet/Zoom.</p>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <div class="lg:col-span-2">
+        <form id="contactForm" class="grid grid-cols-1 gap-4 bg-white p-6 border rounded-2xl shadow-sm"
+              action="mailto:contact@thegrowsoft.com" method="post" enctype="text/plain" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="company_website" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Your name *</label>
+              <input id="name" name="name" type="text" required
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+              <p class="mt-1 text-xs text-gray-500">e.g., Md. Rahim</p>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
+              <input id="email" name="email" type="email" required
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel"
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-700">Company</label>
+              <input id="company" name="company" type="text"
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="budget" class="block text-sm font-medium text-gray-700">Budget range</label>
+              <select id="budget" name="budget" class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200">
+                <option value="">Select…</option>
+                <option>Under $1k</option>
+                <option>$1k – $3k</option>
+                <option>$3k – $8k</option>
+                <option>$8k+</option>
+              </select>
+            </div>
+            <div>
+              <fieldset>
+                <legend class="block text-sm font-medium text-gray-700">I’m interested in</legend>
+                <div class="mt-1 grid grid-cols-2 gap-2 text-sm">
+                  <label class="inline-flex items-center gap-2"><input type="checkbox" name="services" value="Web Dev"> Web Dev</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox" name="services" value="Software"> Software</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox" name="services" value="Marketing"> Marketing</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox" name="services" value="SEO"> SEO</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox" name="services" value="Branding"> Branding</label>
+                  <label class="inline-flex items-center gap-2"><input type="checkbox" name="services" value="AI/Automation"> AI/Automation</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Project details *</label>
+            <textarea id="message" name="message" rows="5" required
+                      class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"
+                      placeholder="What are you trying to build? Goals, deadline, examples…"></textarea>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <input id="consent" type="checkbox" required class="mt-1">
+            <label for="consent" class="text-sm text-gray-700">I agree to be contacted about my request.</label>
+          </div>
+
+          <!-- Status -->
+          <div aria-live="polite" id="formStatus" class="text-sm"></div>
+
+          <div class="mt-2 flex gap-3">
+            <button type="submit" class="btn-primary px-6 py-3 rounded-full inline-flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Send message
+            </button>
+            <button type="reset" class="btn-outline px-6 py-3 rounded-full">Reset</button>
+          </div>
+
+          <!-- No-JS fallback note -->
+          <noscript>
+            <p class="mt-3 text-sm text-gray-500">JavaScript disabled—this form will open your email client via <code>mailto:</code>.</p>
+          </noscript>
+        </form>
+
+        <!-- Map / Areas we serve -->
+        <div class="mt-8 grid sm:grid-cols-2 gap-4">
+          <div class="p-6 bg-white border rounded-2xl shadow-sm">
+            <h3 class="font-semibold text-gray-900">Areas we serve</h3>
+            <p class="text-gray-600 mt-1 text-sm">Dhaka (Ashulia & Banani) • Remote (Worldwide)</p>
+          </div>
+          <div class="p-6 bg-white border rounded-2xl shadow-sm">
+            <h3 class="font-semibold text-gray-900">Hours</h3>
+            <p class="text-gray-600 mt-1 text-sm">Sun–Thu: 10:00–19:00 BST • 24/7 support for active projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-indigo-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 fade-up">Need a quick estimate?</h2>
+      <p class="mt-3 text-gray-700 fade-up delay-1">Share a link to your brief or feature list—we’ll reply with scope and timeline.</p>
+      <div class="mt-6 fade-up delay-2">
+        <a href="mailto:contact@thegrowsoft.com?subject=Quick%20Estimate%20Request" class="inline-flex items-center gap-3 px-8 py-4 btn-primary rounded-full font-semibold shadow-lg">
+          <i class="fa-solid fa-calculator"></i> Request estimate
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+      <div>
+        <h4 class="font-bold text-lg">Growsoft</h4>
+        <p class="mt-2 text-gray-400">Build your brand with confidence & creativity.</p>
+        <ul class="mt-4 text-sm text-gray-400 space-y-1">
+          <li><i class="fa-solid fa-location-dot mr-2 text-[var(--brand)]"></i> Ashulia & Banani, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-envelope mr-2 text-[var(--brand)]"></i> <a href="mailto:contact@thegrowsoft.com" class="hover:text-white">contact@thegrowsoft.com</a></li>
+          <li><i class="fa-solid fa-phone mr-2 text-[var(--brand)]"></i> +880 01603747235</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Services</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Website Development</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Software Development</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Digital Marketing</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Graphic Design</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Social Media</h5>
+        <div class="mt-3 flex gap-3">
+          <a href="https://www.facebook.com/thegrowsoft" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/thegrowsoft/" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/TheGrowSoft" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Other Pages</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="#" class="hover:text-white">Privacy & Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-sm text-gray-500">© <span id="year"></span> Growsoft — All rights reserved.</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      // Desktop submenu
+      document.querySelectorAll('.menu-group').forEach(group=>{
+        const btn = group.querySelector('button[aria-haspopup="true"]');
+        const menu = group.querySelector('.submenu'); if (!btn || !menu) return;
+        const open = ()=>{ menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); };
+        const close = ()=>{ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); };
+        group.addEventListener('mouseenter', open);
+        group.addEventListener('mouseleave', close);
+        btn.addEventListener('focus', open);
+        menu.addEventListener('focusout', (e)=>{ if (!group.contains(e.relatedTarget)) close(); });
+        group.addEventListener('keydown', (e)=>{ if (e.key==='Escape'){ close(); btn.focus(); }});
+      });
+
+      // Mobile menu
+      const toggle = document.getElementById('mobileToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (toggle && menu){
+        toggle.addEventListener('click', ()=>{
+          const open = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+      }
+      document.querySelectorAll('[data-acc]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const key = btn.getAttribute('data-acc');
+          const panel = document.querySelector(`[data-panel="${key}"]`);
+          if (!panel) return;
+          const isHidden = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(isHidden));
+        });
+      });
+
+      // FORM handling (AJAX with fallback)
+      const form = document.getElementById('contactForm');
+      const statusEl = document.getElementById('formStatus');
+      const ENDPOINT = "https://formspree.io/f/FORM_ENDPOINT"; // <-- replace
+
+      function setStatus(html, ok){
+        statusEl.innerHTML = html;
+        statusEl.className = ok ? "text-sm text-green-700 mt-2" : "text-sm text-red-700 mt-2";
+      }
+
+      form.addEventListener('submit', async (e)=>{
+        // If JS available, try AJAX
+        e.preventDefault();
+
+        // Honeypot
+        const hp = form.querySelector('input[name="company_website"]');
+        if (hp && hp.value.trim() !== "") { setStatus("Spam detected. Please try again.", false); return; }
+
+        // Basic validation
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        const consent = document.getElementById('consent').checked;
+
+        if (!name || !email || !message || !consent){
+          setStatus("Please fill all required fields and agree to be contacted.", false);
+          return;
+        }
+
+        try{
+          const data = new FormData(form);
+          const res = await fetch(ENDPOINT, { method: "POST", body: data, headers: { "Accept":"application/json" }});
+          if (res.ok){
+            form.reset();
+            setStatus('<i class="fa-solid fa-circle-check"></i> Thanks! Your message has been sent.', true);
+          }else{
+            setStatus("Could not submit form. Please email us at contact@thegrowsoft.com", false);
+          }
+        }catch(err){
+          setStatus("Network error. Please email us at contact@thegrowsoft.com", false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

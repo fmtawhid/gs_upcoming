@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Free Consulting – Book a Session | Growsoft</title>
+
+  <!-- Canonical + Theme -->
+  <link rel="canonical" href="https://www.thegrowsoft.com/booking"/>
+  <meta name="theme-color" content="#4f46e5"/>
+  <link rel="icon" href="/favicon.ico"/>
+
+  <!-- SEO -->
+  <meta name="description" content="Book a free consulting session with Growsoft. Pick a time slot (Sun–Thu, 10:00–19:00 BST). Web/software, marketing, SEO, automation & AI."/>
+  <meta name="author" content="Growsoft"/>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Free Consulting – Book a Session | Growsoft"/>
+  <meta property="og:description" content="Pick a time slot and tell us your goals. We’ll confirm within one business day."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.thegrowsoft.com/booking"/>
+  <meta property="og:image" content="https://www.thegrowsoft.com/og-image.jpg"/>
+  <meta property="og:site_name" content="Growsoft"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Tailwind + Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <style>
+    :root{ --brand: rgb(79 70 229 / 1); }
+    .btn-primary{ background:var(--brand); color:#fff; }
+    .btn-primary:hover{ filter:brightness(.95); transform:translateY(-2px); }
+    .btn-outline{ border:2px solid var(--brand); color:var(--brand); background:transparent; }
+    .btn-outline:hover{ background:rgba(79,70,229,.06); }
+
+    /* Animations (respect reduced motion) */
+    @media (prefers-reduced-motion:no-preference){
+      .fade-up{ transform:translateY(12px); opacity:0; animation:fadeUp .6s forwards; }
+      .delay-1{ animation-delay:.12s; } .delay-2{ animation-delay:.24s; } .delay-3{ animation-delay:.36s; }
+      @keyframes fadeUp{ to{ transform:none; opacity:1; } }
+    }
+
+    .submenu{ opacity:0; transform:translateY(8px); pointer-events:none; }
+    .submenu.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+
+    a:focus,button:focus,input:focus,select:focus,textarea:focus{
+      outline:3px solid rgba(99,102,241,.14); outline-offset:3px;
+    }
+    html{ scroll-behavior:smooth; }
+
+    /* Slot styles */
+    .slot{ border:1px solid #e5e7eb; padding:.6rem .8rem; border-radius:.75rem; cursor:pointer; text-align:center; }
+    .slot:hover{ background:#f5f7ff; }
+    .slot[aria-pressed="true"]{ background:var(--brand); color:#fff; border-color:var(--brand); }
+    .slot[disabled]{ opacity:.4; cursor:not-allowed; }
+  </style>
+
+  <!-- JSON-LD: Service/ReserveAction (booking) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Free Consulting",
+    "provider":{"@type":"Organization","name":"Growsoft","url":"https://www.thegrowsoft.com"},
+    "areaServed":"BD",
+    "availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://www.thegrowsoft.com/booking"},
+    "potentialAction":{
+      "@type":"ReserveAction",
+      "target":{"@type":"EntryPoint","urlTemplate":"https://www.thegrowsoft.com/booking"},
+      "result":{"@type":"Reservation","name":"Consultation Booking"}
+    }
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-800 bg-white">
+  <!-- Skip -->
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-sm px-3 py-2 rounded shadow">Skip to content</a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <a href="/" class="text-2xl font-extrabold" aria-label="Growsoft home" style="background:linear-gradient(90deg,#7c3aed,#06b6d4); -webkit-background-clip:text; color:transparent;">Growsoft</a>
+
+        <div class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+          <a href="/" class="hover:text-[var(--brand)]">Home</a>
+
+          <div class="relative menu-group">
+            <button type="button" class="flex items-center gap-2 hover:text-[var(--brand)]"
+              aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="services-menu" class="submenu absolute left-0 mt-3 w-72 bg-white border rounded-lg shadow-lg transition-all" role="menu" aria-label="Services">
+              <ul class="p-3 grid gap-1">
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-globe text-[var(--brand)] w-5"></i> Website Development</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-code text-[var(--brand)] w-5"></i> Software Development</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-brands fa-facebook text-[var(--brand)] w-5"></i> Social Media Marketing</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-chart-line text-[var(--brand)] w-5"></i> Digital Marketing</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-pen-nib text-[var(--brand)] w-5"></i> Graphic Design</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-robot text-[var(--brand)] w-5"></i> AI Integrations</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-cogs text-[var(--brand)] w-5"></i> Automation</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-magnifying-glass text-[var(--brand)] w-5"></i> Google Ranking (SEO)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="/about" class="hover:text-[var(--brand)]">About Us</a>
+          <a href="/contact" class="hover:text-[var(--brand)]">Contact</a>
+          <a href="/booking" class="text-[var(--brand)] font-semibold">Free Consulting</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="/#book" class="px-4 py-2 rounded-lg font-semibold btn-primary hidden md:inline-flex items-center gap-2"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          <button id="mobileToggle" type="button" class="md:hidden p-2 text-gray-600 rounded-md hover:bg-gray-100" aria-label="Open mobile menu" aria-controls="mobileMenu" aria-expanded="false">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+      <div class="px-6 py-4 space-y-3">
+        <a href="/" class="block py-2">Home</a>
+        <a href="/about" class="block py-2">About</a>
+        <a href="/contact" class="block py-2">Contact</a>
+        <a href="/booking" class="block py-2 font-semibold text-[var(--brand)]">Free Consulting</a>
+        <div>
+          <button type="button" data-acc="services" class="w-full text-left flex items-center justify-between py-2" aria-controls="m-services" aria-expanded="false">
+            Services <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="m-services" data-panel="services" class="pl-4 hidden">
+            <a href="/#services" class="block py-2">Website Development</a>
+            <a href="/#services" class="block py-2">Software Development</a>
+            <a href="/#services" class="block py-2">Digital Marketing</a>
+            <a href="/#services" class="block py-2">SEO</a>
+            <a href="/#services" class="block py-2">Graphic Design</a>
+            <a href="/#services" class="block py-2">AI & Automation</a>
+          </div>
+        </div>
+        <a href="mailto:contact@thegrowsoft.com" class="block py-2 font-semibold btn-primary text-center rounded-md">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="content" class="relative overflow-hidden pt-20 pb-12">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=80"
+           alt="" class="w-full h-full object-cover opacity-10" width="1600" height="900" fetchpriority="high">
+    </div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="max-w-xl">
+          <p class="text-sm font-semibold tracking-wider uppercase text-[var(--brand)] fade-up">Free Consulting</p>
+          <h1 class="mt-2 text-4xl md:text-5xl font-extrabold text-gray-900 fade-up delay-1">Book your 30-minute session</h1>
+          <p class="mt-4 text-lg text-gray-700 fade-up delay-2">Sun–Thu, 10:00–19:00 (Asia/Dhaka). Pick a slot—tell us your goals—we’ll confirm ASAP.</p>
+          <div class="mt-6 text-sm text-gray-600 fade-up delay-3">
+            <span class="inline-flex items-center gap-2"><i class="fa-solid fa-clock text-[var(--brand)]"></i> Duration: 30 minutes</span>
+            <span class="ml-4 inline-flex items-center gap-2"><i class="fa-solid fa-video text-[var(--brand)]"></i> Google Meet / Zoom / In-person</span>
+          </div>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100 p-6 bg-white">
+          <h2 class="text-xl font-semibold text-gray-900">Quick facts</h2>
+          <ul class="mt-2 text-gray-700 space-y-2">
+            <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--brand)] mt-1"></i> No cost & no obligation</li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--brand)] mt-1"></i> Get ballpark scope & timeline</li>
+            <li class="flex gap-2"><i class="fa-solid fa-check text-[var(--brand)] mt-1"></i> Get a follow-up doc after the call</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING WIDGET -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-10">
+      <!-- Slots -->
+      <aside class="lg:col-span-1">
+        <div class="p-6 bg-indigo-50 rounded-2xl border">
+          <h3 class="text-xl font-semibold text-gray-900">Pick a time</h3>
+          <p class="text-gray-600 text-sm">Times shown in your local timezone.</p>
+
+          <div class="mt-4">
+            <label for="datePicker" class="block text-sm font-medium text-gray-700">Choose a date</label>
+            <input id="datePicker" type="date"
+                   class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+          </div>
+
+          <div id="slotGrid" class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-2" aria-live="polite">
+            <!-- slots rendered by JS -->
+          </div>
+
+          <p id="slotHint" class="mt-3 text-xs text-gray-500">Open hours: Sun–Thu, 10:00–19:00.</p>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <div class="lg:col-span-2">
+        <form id="bookingForm" class="grid grid-cols-1 gap-4 bg-white p-6 border rounded-2xl shadow-sm"
+              action="mailto:contact@thegrowsoft.com" method="post" enctype="text/plain" novalidate>
+          <!-- Honeypot -->
+          <input type="text" name="homepage_url" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <!-- Hidden selected slot -->
+          <input type="hidden" id="slotISO" name="slotISO">
+          <input type="hidden" id="slotLocal" name="slotLocal">
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Your name *</label>
+              <input id="name" name="name" type="text" required
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
+              <input id="email" name="email" type="email" required
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel"
+                     class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+            </div>
+            <div>
+              <label for="meetingType" class="block text-sm font-medium text-gray-700">Meeting type *</label>
+              <select id="meetingType" name="meetingType" required class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200">
+                <option value="">Select…</option>
+                <option>Google Meet</option>
+                <option>Zoom</option>
+                <option>In-person (Dhaka)</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="addressWrap" class="hidden">
+            <label for="address" class="block text-sm font-medium text-gray-700">Meeting address (Dhaka)</label>
+            <input id="address" name="address" type="text" placeholder="Your office / a cafe in Banani/Ashulia"
+                   class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"/>
+          </div>
+
+          <div>
+            <label for="goals" class="block text-sm font-medium text-gray-700">What do you want to discuss? *</label>
+            <textarea id="goals" name="goals" rows="5" required
+                      class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-indigo-200"
+                      placeholder="Project idea, current website/app, pain points, timeline, budget…"></textarea>
+          </div>
+
+          <div class="flex items-start gap-2">
+            <input id="consent" type="checkbox" required class="mt-1">
+            <label for="consent" class="text-sm text-gray-700">I agree to be contacted about my booking.</label>
+          </div>
+
+          <!-- Status -->
+          <div aria-live="polite" id="formStatus" class="text-sm"></div>
+
+          <div class="mt-2 flex flex-wrap gap-3">
+            <button type="submit" class="btn-primary px-6 py-3 rounded-full inline-flex items-center gap-2">
+              <i class="fa-solid fa-calendar-check"></i> Confirm booking
+            </button>
+            <button type="button" id="addToGCal" class="btn-outline px-6 py-3 rounded-full" disabled>Add to Google Calendar</button>
+            <button type="button" id="downloadICS" class="btn-outline px-6 py-3 rounded-full" disabled>Download .ics</button>
+            <button type="reset" class="btn-outline px-6 py-3 rounded-full">Reset</button>
+          </div>
+
+          <noscript>
+            <p class="mt-3 text-sm text-gray-500">JavaScript disabled—form will open your email client via <code>mailto:</code>. Please include your preferred date & time.</p>
+          </noscript>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Short -->
+  <section class="py-14 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Booking FAQs</h2>
+      <div class="mt-6 grid sm:grid-cols-2 gap-6 text-gray-700">
+        <div>
+          <h3 class="font-semibold">Is it really free?</h3>
+          <p class="mt-1 text-sm">Yes—30 minutes, no obligation. If we’re a fit, we’ll propose next steps.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">What if I can’t find a slot?</h3>
+          <p class="mt-1 text-sm">Email <a class="underline" href="mailto:contact@thegrowsoft.com">contact@thegrowsoft.com</a> with 2–3 options—we’ll arrange something.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+      <div>
+        <h4 class="font-bold text-lg">Growsoft</h4>
+        <p class="mt-2 text-gray-400">Build your brand with confidence & creativity.</p>
+        <ul class="mt-4 text-sm text-gray-400 space-y-1">
+          <li><i class="fa-solid fa-location-dot mr-2 text-[var(--brand)]"></i> Ashulia & Banani, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-envelope mr-2 text-[var(--brand)]"></i> <a href="mailto:contact@thegrowsoft.com" class="hover:text-white">contact@thegrowsoft.com</a></li>
+          <li><i class="fa-solid fa-phone mr-2 text-[var(--brand)]"></i> +880 01603747235</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Services</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Website Development</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Software Development</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Digital Marketing</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Graphic Design</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Social Media</h5>
+        <div class="mt-3 flex gap-3">
+          <a href="https://www.facebook.com/thegrowsoft" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/thegrowsoft/" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/TheGrowSoft" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Other Pages</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="/booking" class="hover:text-white">Free Consulting</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-sm text-gray-500">© <span id="year"></span> Growsoft — All rights reserved.</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      // Year
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      // Desktop submenu
+      document.querySelectorAll('.menu-group').forEach(group=>{
+        const btn = group.querySelector('button[aria-haspopup="true"]');
+        const menu = group.querySelector('.submenu'); if (!btn || !menu) return;
+        const open = ()=>{ menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); };
+        const close = ()=>{ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); };
+        group.addEventListener('mouseenter', open);
+        group.addEventListener('mouseleave', close);
+        btn.addEventListener('focus', open);
+        menu.addEventListener('focusout', (e)=>{ if (!group.contains(e.relatedTarget)) close(); });
+        group.addEventListener('keydown', (e)=>{ if (e.key==='Escape'){ close(); btn.focus(); }});
+      });
+
+      // Mobile menu
+      const toggle = document.getElementById('mobileToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (toggle && menu){
+        toggle.addEventListener('click', ()=>{
+          const open = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+      }
+      document.querySelectorAll('[data-acc]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const key = btn.getAttribute('data-acc');
+          const panel = document.querySelector(`[data-panel="${key}"]`);
+          if (!panel) return;
+          const isHidden = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(isHidden));
+        });
+      });
+
+      // ===== Slots & Booking =====
+      const OPEN_DAYS = [0,1,2,3,4]; // Sun(0) to Thu(4) as open (Fri=5, Sat=6 closed)
+      const START_HOUR = 10; // 10:00
+      const END_HOUR = 19;   // 19:00
+      const SLOT_MINUTES = 30;
+      const slotGrid = document.getElementById('slotGrid');
+      const datePicker = document.getElementById('datePicker');
+      const slotISO = document.getElementById('slotISO');
+      const slotLocal = document.getElementById('slotLocal');
+      const addToGCalBtn = document.getElementById('addToGCal');
+      const downloadICSBtn = document.getElementById('downloadICS');
+      const meetingType = document.getElementById('meetingType');
+      const addressWrap = document.getElementById('addressWrap');
+
+      // Default date = today or next open day within 14 days
+      function formatDateInput(d){ const y=d.getFullYear(); const m=String(d.getMonth()+1).padStart(2,'0'); const day=String(d.getDate()).padStart(2,'0'); return `${y}-${m}-${day}`;}
+      function nextOpenDate(from){
+        const d = new Date(from);
+        for (let i=0;i<14;i++){
+          if (OPEN_DAYS.includes(d.getDay())) return d;
+          d.setDate(d.getDate()+1);
+        }
+        return from;
+      }
+      const today = new Date();
+      const first = nextOpenDate(today);
+      datePicker.min = formatDateInput(today);
+      datePicker.value = formatDateInput(first);
+
+      // Render slots for a date (local TZ)
+      function renderSlots(dateStr){
+        slotGrid.innerHTML = '';
+        const base = new Date(dateStr+"T00:00:00");
+        const dow = base.getDay();
+        if (!OPEN_DAYS.includes(dow)){
+          slotGrid.innerHTML = '<div class="col-span-full text-sm text-gray-500">Closed this day. Please pick Sun–Thu.</div>';
+          return;
+        }
+        // build slots
+        const slots = [];
+        for (let h=START_HOUR; h<END_HOUR; h++){
+          for (let m=0; m<60; m+=SLOT_MINUTES){
+            const dt = new Date(base);
+            dt.setHours(h,m,0,0);
+            // past slots disabled if date==today
+            const disabled = dt < new Date();
+            slots.push({dt, disabled});
+          }
+        }
+        slots.forEach(({dt, disabled})=>{
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'slot';
+          btn.textContent = dt.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+          btn.setAttribute('data-iso', dt.toISOString());
+          btn.setAttribute('data-local', `${dt.toLocaleString([], {weekday:'short', month:'short', day:'2-digit'})} ${btn.textContent}`);
+          btn.setAttribute('aria-pressed','false');
+          if (disabled){ btn.disabled = true; }
+          btn.addEventListener('click', ()=>{
+            // clear previous
+            slotGrid.querySelectorAll('.slot[aria-pressed="true"]').forEach(x=>x.setAttribute('aria-pressed','false'));
+            btn.setAttribute('aria-pressed','true');
+            slotISO.value = btn.getAttribute('data-iso');
+            slotLocal.value = btn.getAttribute('data-local');
+            addToGCalBtn.disabled = false;
+            downloadICSBtn.disabled = false;
+          });
+          slotGrid.appendChild(btn);
+        });
+      }
+      renderSlots(datePicker.value);
+      datePicker.addEventListener('change', e=> renderSlots(e.target.value));
+
+      // Meeting type toggles address
+      meetingType.addEventListener('change', ()=>{
+        if (meetingType.value.startsWith('In-person')) addressWrap.classList.remove('hidden');
+        else addressWrap.classList.add('hidden');
+      });
+
+      // Google Calendar Link & ICS
+      function makeGCalUrl({title, details, location, start, end}){
+        // times in UTC: YYYYMMDDTHHMMSSZ
+        const fmt = d => d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+        const params = new URLSearchParams({
+          action: 'TEMPLATE',
+          text: title,
+          details,
+          location,
+          dates: `${fmt(start)}/${fmt(end)}`
+        });
+        return `https://calendar.google.com/calendar/render?${params.toString()}`;
+      }
+      function makeICS({title, details, location, start, end}){
+        function icsDate(d){ return d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z'; }
+        const lines = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Growsoft//Booking//EN',
+          'BEGIN:VEVENT',
+          `UID:${crypto.randomUUID()}`,
+          `DTSTAMP:${icsDate(new Date())}`,
+          `DTSTART:${icsDate(start)}`,
+          `DTEND:${icsDate(end)}`,
+          `SUMMARY:${title}`,
+          `DESCRIPTION:${details.replace(/\n/g,'\\n')}`,
+          `LOCATION:${location}`,
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ];
+        return new Blob([lines.join('\r\n')], {type:'text/calendar'});
+      }
+
+      function computeTimes(){
+        if (!slotISO.value) return null;
+        const start = new Date(slotISO.value);
+        const end = new Date(start.getTime() + 30*60*1000);
+        return {start, end};
+      }
+
+      addToGCalBtn.addEventListener('click', ()=>{
+        const t = computeTimes(); if (!t) return;
+        const mt = meetingType.value || 'Online';
+        const title = 'Free Consulting – Growsoft';
+        const details = '30-minute consultation.\nBooked via thegrowsoft.com/booking';
+        const location = mt.startsWith('In-person') ? (document.getElementById('address').value || 'Dhaka') : mt;
+        const url = makeGCalUrl({title, details, location, start:t.start, end:t.end});
+        window.open(url, '_blank', 'noopener');
+      });
+
+      downloadICSBtn.addEventListener('click', ()=>{
+        const t = computeTimes(); if (!t) return;
+        const mt = meetingType.value || 'Online';
+        const title = 'Free Consulting – Growsoft';
+        const details = '30-minute consultation. Booked via thegrowsoft.com/booking';
+        const location = mt.startsWith('In-person') ? (document.getElementById('address').value || 'Dhaka') : mt;
+        const blob = makeICS({title, details, location, start:t.start, end:t.end});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'growsoft-consulting.ics';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(()=> URL.revokeObjectURL(url), 1000);
+      });
+
+      // ===== Form Submit (AJAX with fallback) =====
+      const form = document.getElementById('bookingForm');
+      const statusEl = document.getElementById('formStatus');
+      const ENDPOINT = "https://formspree.io/f/FORM_ENDPOINT"; // <-- replace
+
+      function setStatus(html, ok){
+        statusEl.innerHTML = html;
+        statusEl.className = ok ? "text-sm text-green-700 mt-2" : "text-sm text-red-700 mt-2";
+      }
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+
+        // Honeypot
+        const hp = form.querySelector('input[name="homepage_url"]');
+        if (hp && hp.value.trim() !== "") { setStatus("Spam detected. Please try again.", false); return; }
+
+        // Basic validation
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const goals = form.goals.value.trim();
+        const consent = document.getElementById('consent').checked;
+        if (!name || !email || !goals || !consent){
+          setStatus("Please fill all required fields and agree to be contacted.", false);
+          return;
+        }
+        if (!slotISO.value){
+          setStatus("Please pick a time slot.", false);
+          return;
+        }
+        if (!meetingType.value){
+          setStatus("Please select a meeting type.", false);
+          return;
+        }
+
+        try{
+          const data = new FormData(form);
+          // include readable slot
+          data.append('selected_slot_local', slotLocal.value);
+          data.append('selected_slot_iso', slotISO.value);
+
+          const res = await fetch(ENDPOINT, { method: "POST", body: data, headers: { "Accept":"application/json" }});
+          if (res.ok){
+            setStatus('<i class="fa-solid fa-circle-check"></i> Thanks! We received your booking. We\'ll confirm by email.', true);
+          }else{
+            setStatus("Could not submit. Please email us at contact@thegrowsoft.com.", false);
+          }
+        }catch{
+          setStatus("Network error. Please email us at contact@thegrowsoft.com.", false);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Web Development Services – Fast, SEO-Friendly, Conversion-Focused | Growsoft</title>
+
+  <!-- Canonical + Theme -->
+  <link rel="canonical" href="https://www.thegrowsoft.com/web-development"/>
+  <meta name="theme-color" content="#4f46e5"/>
+  <link rel="icon" href="/favicon.ico"/>
+
+  <!-- SEO -->
+  <meta name="description" content="Growsoft builds high-performance websites and web apps using Laravel, Django, WordPress, and modern JS. Speed, SEO, security, and conversions—done right."/>
+  <meta name="author" content="Growsoft"/>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Web Development Services – Fast, SEO-Friendly, Conversion-Focused"/>
+  <meta property="og:description" content="Custom sites and web apps with Laravel, Django, WordPress, Tailwind, Alpine/React. Free consulting—book now."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.thegrowsoft.com/web-development"/>
+  <meta property="og:image" content="https://www.thegrowsoft.com/og-image.jpg"/>
+  <meta property="og:site_name" content="Growsoft"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Tailwind + Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <style>
+    :root{ --brand: rgb(79 70 229 / 1); }
+    .btn-primary{ background:var(--brand); color:#fff; }
+    .btn-primary:hover{ filter:brightness(.95); transform:translateY(-2px); }
+    .btn-outline{ border:2px solid var(--brand); color:var(--brand); background:transparent; }
+    .btn-outline:hover{ background:rgba(79,70,229,.06); }
+
+    /* Animations (respect reduced motion) */
+    @media (prefers-reduced-motion:no-preference){
+      .fade-up{ transform:translateY(12px); opacity:0; animation:fadeUp .6s forwards; }
+      .delay-1{ animation-delay:.12s; } .delay-2{ animation-delay:.24s; } .delay-3{ animation-delay:.36s; }
+      @keyframes fadeUp{ to{ transform:none; opacity:1; } }
+    }
+
+    .submenu{ opacity:0; transform:translateY(8px); pointer-events:none; }
+    .submenu.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+
+    a:focus,button:focus,input:focus,select:focus,textarea:focus{
+      outline:3px solid rgba(99,102,241,.14); outline-offset:3px;
+    }
+    html{ scroll-behavior:smooth; }
+
+    /* Pricing */
+    .plan{ border:1px solid #e5e7eb; border-radius:1rem; padding:1.25rem; background:#fff; }
+    .plan.featured{ border-color:var(--brand); box-shadow:0 10px 30px rgba(79,70,229,.12); position:relative; }
+    .badge{ position:absolute; top:-12px; right:14px; background:var(--brand); color:#fff; padding:.25rem .5rem; border-radius:.5rem; font-size:.75rem; }
+  </style>
+
+  <!-- JSON-LD: Service + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Web Development",
+    "serviceType":"Website & Web App Development",
+    "provider":{"@type":"Organization","name":"Growsoft","url":"https://www.thegrowsoft.com"},
+    "areaServed":"BD",
+    "offers":{
+      "@type":"Offer",
+      "priceCurrency":"USD",
+      "priceSpecification":{
+        "@type":"PriceSpecification",
+        "price":"1000",
+        "priceCurrency":"USD"
+      },
+      "description":"Starter websites from $1k; custom apps priced on scope."
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Which tech stack do you use?","acceptedAnswer":{"@type":"Answer","text":"Laravel, Django, WordPress, Tailwind CSS, Alpine/React, PostgreSQL/MySQL, and modern tooling."}},
+      {"@type":"Question","name":"How long does a website take?","acceptedAnswer":{"@type":"Answer","text":"Simple sites 1–3 weeks; custom apps 4–12+ weeks depending on scope."}},
+      {"@type":"Question","name":"Do you provide hosting and maintenance?","acceptedAnswer":{"@type":"Answer","text":"Yes, we set up cloud hosting, CI/CD, backups, monitoring, and ongoing updates."}},
+      {"@type":"Question","name":"Do you migrate old sites?","acceptedAnswer":{"@type":"Answer","text":"We audit, plan redirects, migrate content, and preserve SEO rankings."}}
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-800 bg-white">
+  <!-- Skip -->
+  <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-sm px-3 py-2 rounded shadow">Skip to content</a>
+
+  <!-- Header (consistent with other pages) -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center justify-between py-4" aria-label="Main navigation">
+        <a href="/" class="text-2xl font-extrabold" aria-label="Growsoft home" style="background:linear-gradient(90deg,#7c3aed,#06b6d4); -webkit-background-clip:text; color:transparent;">Growsoft</a>
+
+        <div class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+          <a href="/" class="hover:text-[var(--brand)]">Home</a>
+
+          <div class="relative menu-group">
+            <button type="button" class="flex items-center gap-2 hover:text-[var(--brand)]"
+              aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">
+              Services <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="services-menu" class="submenu absolute left-0 mt-3 w-72 bg-white border rounded-lg shadow-lg transition-all" role="menu" aria-label="Services">
+              <ul class="p-3 grid gap-1">
+                <li><a role="menuitem" href="/web-development" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50 text-[var(--brand)] font-semibold"><i class="fa-solid fa-globe text-[var(--brand)] w-5"></i> Web Development</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-code text-[var(--brand)] w-5"></i> Software Development</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-brands fa-facebook text-[var(--brand)] w-5"></i> Social Media Marketing</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-chart-line text-[var(--brand)] w-5"></i> Digital Marketing</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-magnifying-glass text-[var(--brand)] w-5"></i> SEO</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-pen-nib text-[var(--brand)] w-5"></i> Branding</a></li>
+                <li><a role="menuitem" href="/#services" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50"><i class="fa-solid fa-robot text-[var(--brand)] w-5"></i> AI & Automation</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="/about" class="hover:text-[var(--brand)]">About</a>
+          <a href="/contact" class="hover:text-[var(--brand)]">Contact</a>
+          <a href="/booking" class="hover:text-[var(--brand)]">Free Consulting</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="/booking" class="px-4 py-2 rounded-lg font-semibold btn-primary hidden md:inline-flex items-center gap-2"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+          <button id="mobileToggle" type="button" class="md:hidden p-2 text-gray-600 rounded-md hover:bg-gray-100" aria-label="Open mobile menu" aria-controls="mobileMenu" aria-expanded="false">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden bg-white border-t hidden">
+      <div class="px-6 py-4 space-y-3">
+        <a href="/" class="block py-2">Home</a>
+        <a href="/web-development" class="block py-2 font-semibold text-[var(--brand)]">Web Development</a>
+        <a href="/about" class="block py-2">About</a>
+        <a href="/contact" class="block py-2">Contact</a>
+        <a href="/booking" class="block py-2">Free Consulting</a>
+        <div>
+          <button type="button" data-acc="services" class="w-full text-left flex items-center justify-between py-2" aria-controls="m-services" aria-expanded="false">
+            Services <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div id="m-services" data-panel="services" class="pl-4 hidden">
+            <a href="/#services" class="block py-2">Software Development</a>
+            <a href="/#services" class="block py-2">Digital Marketing</a>
+            <a href="/#services" class="block py-2">SEO</a>
+            <a href="/#services" class="block py-2">Branding</a>
+            <a href="/#services" class="block py-2">AI & Automation</a>
+          </div>
+        </div>
+        <a href="mailto:contact@thegrowsoft.com" class="block py-2 font-semibold btn-primary text-center rounded-md">Email Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="content" class="relative overflow-hidden pt-20 pb-12">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80"
+           alt="" class="w-full h-full object-cover opacity-10" width="1600" height="900" fetchpriority="high">
+    </div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="max-w-xl">
+          <p class="text-sm font-semibold tracking-wider uppercase text-[var(--brand)] fade-up">Web Development</p>
+          <h1 class="mt-2 text-4xl md:text-5xl font-extrabold text-gray-900 fade-up delay-1">Fast, secure & SEO-ready websites</h1>
+          <p class="mt-4 text-lg text-gray-700 fade-up delay-2">Laravel, Django, WordPress—plus modern frontend. We ship production-ready builds that load fast and convert better.</p>
+          <div class="mt-6 flex flex-wrap gap-3 fade-up delay-3">
+            <a href="/booking" class="btn-primary px-6 py-3 rounded-full inline-flex items-center gap-2"><i class="fa-solid fa-calendar-check"></i> Book Free Consulting</a>
+            <a href="#pricing" class="btn-outline px-6 py-3 rounded-full inline-flex items-center gap-2"><i class="fa-solid fa-tag"></i> View Pricing</a>
+          </div>
+        </div>
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+               alt="Dashboard UI on laptop screen" class="w-full h-96 object-cover" width="1200" height="900" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-2xl shadow-sm fade-up">
+          <i class="fa-solid fa-gauge-high text-[var(--brand)] text-2xl"></i>
+          <h3 class="mt-3 font-semibold text-lg">Blazing performance</h3>
+          <p class="mt-1 text-gray-600">Core Web Vitals, image optimization, caching/CDN—faster pages, better rankings.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow-sm fade-up delay-1">
+          <i class="fa-solid fa-shield-halved text-[var(--brand)] text-2xl"></i>
+          <h3 class="mt-3 font-semibold text-lg">Security first</h3>
+          <p class="mt-1 text-gray-600">Hardened configs, auth/roles, validation, backups & monitoring.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow-sm fade-up delay-2">
+          <i class="fa-solid fa-arrow-trend-up text-[var(--brand)] text-2xl"></i>
+          <h3 class="mt-3 font-semibold text-lg">Built to convert</h3>
+          <p class="mt-1 text-gray-600">Clean UX, tracking, funnels, A/B hooks—turn visitors into customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Tech stack we love</h2>
+      <p class="text-gray-600 mt-1">Backend + Frontend + Infra</p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+        <div class="p-3 bg-white border rounded-xl flex items-center gap-2"><i class="fa-brands fa-laravel text-[var(--brand)]"></i> Laravel</div>
+        <div class="p-3 bg-white border rounded-xl flex items-center gap-2"><i class="fa-brands fa-python text-[var(--brand)]"></i> Django</div>
+        <div class="p-3 bg-white border rounded-xl flex items-center gap-2"><i class="fa-brands fa-wordpress-simple text-[var(--brand)]"></i> WordPress</div>
+        <div class="p-3 bg-white border rounded-xl flex items-center gap-2"><i class="fa-brands fa-react text-[var(--brand)]"></i> React / Alpine</div>
+        <div class="p-3 bg-white border rounded-xl flex items-center gap-2"><i class="fa-solid fa-database text-[var(--brand)]"></i> PostgreSQL/MySQL</div>
+        <div class="p-3 bg-white border rounded-xl flex items-center gap-2"><i class="fa-solid fa-cloud text-[var(--brand)]"></i> Docker • CI/CD • Cloud</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Our development process</h2>
+      <ol class="mt-8 relative border-s border-gray-200">
+        <li class="ms-6 mb-8">
+          <span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-white"><i class="fa-solid fa-magnifying-glass text-xs"></i></span>
+          <h3 class="font-semibold">1) Discovery & scope</h3>
+          <p class="text-gray-600">Requirements, user stories, budget/Timeline, success metrics.</p>
+        </li>
+        <li class="ms-6 mb-8">
+          <span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-white"><i class="fa-solid fa-pen-ruler text-xs"></i></span>
+          <h3 class="font-semibold">2) UX/UI & architecture</h3>
+          <p class="text-gray-600">Wireframes, system design, data model, API contracts.</p>
+        </li>
+        <li class="ms-6 mb-8">
+          <span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-white"><i class="fa-solid fa-code text-xs"></i></span>
+          <h3 class="font-semibold">3) Build & test</h3>
+          <p class="text-gray-600">Feature sprints, code reviews, automated tests, staging.</p>
+        </li>
+        <li class="ms-6">
+          <span class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)] text-white"><i class="fa-solid fa-rocket text-xs"></i></span>
+          <h3 class="font-semibold">4) Launch & grow</h3>
+          <p class="text-gray-600">CI/CD, analytics, SEO, performance & security hardening.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW (placeholders) -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Recent work</h2>
+        <a href="/contact" class="text-sm text-[var(--brand)] hover:underline">Want a similar result? Contact us</a>
+      </div>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-2xl overflow-hidden border shadow-sm">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=80" alt="E-commerce storefront" class="w-full h-52 object-cover" loading="lazy" width="1000" height="520">
+          <div class="p-4">
+            <h3 class="font-semibold">E-commerce storefront</h3>
+            <p class="text-gray-600 text-sm mt-1">+40% sales in 3 months with faster checkout & SEO.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border shadow-sm">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="SaaS analytics dashboard" class="w-full h-52 object-cover" loading="lazy" width="1000" height="520">
+          <div class="p-4">
+            <h3 class="font-semibold">SaaS analytics dashboard</h3>
+            <p class="text-gray-600 text-sm mt-1">Role-based access, charts, and audit logs.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl overflow-hidden border shadow-sm">
+          <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=1000&q=80" alt="Corporate website revamp" class="w-full h-52 object-cover" loading="lazy" width="1000" height="520">
+          <div class="p-4">
+            <h3 class="font-semibold">Corporate website revamp</h3>
+            <p class="text-gray-600 text-sm mt-1">New IA, faster load, better conversions.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Transparent pricing</h2>
+      <p class="text-gray-600 mt-1">বাংলাদেশি টাকায় কোট চাইলে কন্টাক্ট করুন—USD রেঞ্জ নিচে:</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="plan">
+          <h3 class="text-lg font-semibold">Starter Site</h3>
+          <div class="mt-1 text-3xl font-extrabold">$1k–$2.5k</div>
+          <p class="text-gray-600 mt-1 text-sm">5–8 পেজ, responsive, basic SEO</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> WordPress / Laravel Blade</li>
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> Speed & security basics</li>
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> Contact/Lead forms</li>
+          </ul>
+          <a href="/booking" class="mt-5 inline-flex items-center gap-2 btn-primary px-5 py-3 rounded-full"><i class="fa-solid fa-calendar"></i> Book free call</a>
+        </div>
+
+        <div class="plan featured">
+          <span class="badge">Most Popular</span>
+          <h3 class="text-lg font-semibold">Business Site</h3>
+          <div class="mt-1 text-3xl font-extrabold">$3k–$6k</div>
+          <p class="text-gray-600 mt-1 text-sm">10–20 পেজ, CMS, tracking, on-page SEO</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> Laravel/Django + Headless/WordPress</li>
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> Blog, authoring, roles</li>
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> Analytics & funnels</li>
+          </ul>
+          <a href="/booking" class="mt-5 inline-flex items-center gap-2 btn-primary px-5 py-3 rounded-full"><i class="fa-solid fa-calendar"></i> Book free call</a>
+        </div>
+
+        <div class="plan">
+          <h3 class="text-lg font-semibold">Custom Web App</h3>
+          <div class="mt-1 text-3xl font-extrabold">$6k+</div>
+          <p class="text-gray-600 mt-1 text-sm">Role-based app, dashboards, API, payments</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> React/Alpine + Tailwind</li>
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> PostgreSQL/MySQL + Redis</li>
+            <li><i class="fa-solid fa-check text-[var(--brand)]"></i> CI/CD, logging, monitoring</li>
+          </ul>
+          <a href="/booking" class="mt-5 inline-flex items-center gap-2 btn-primary px-5 py-3 rounded-full"><i class="fa-solid fa-calendar"></i> Book free call</a>
+        </div>
+      </div>
+      <p class="mt-3 text-xs text-gray-500">* Final quote depends on scope, integrations, content, and timelines.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">FAQs</h2>
+
+      <div class="mt-6 space-y-3">
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button type="button" class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">
+            Which stack should I pick? <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Content-heavy? WordPress/Headless. Custom logic? Laravel/Django. We recommend after discovery.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button type="button" class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">
+            Will my site be multilingual? <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">Yes—Bangla/English with SEO-friendly URLs and hreflang tags.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button type="button" class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">
+            Do you handle hosting & maintenance? <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">We set up managed cloud (e.g., VPS/PAAS), SSL, backups, updates, and monitoring.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item border rounded-lg overflow-hidden">
+          <button type="button" class="w-full text-left px-4 py-3 flex items-center justify-between" aria-expanded="false">
+            Can you migrate my old site safely? <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="accordion-content px-4 pb-0">
+            <div class="px-0 pt-0 pb-4 text-gray-600">We audit content/URLs, plan redirects, and preserve rankings & analytics.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-indigo-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-900">Ready to build?</h2>
+      <p class="mt-3 text-gray-700">Tell us your goals—get timeline & a clear plan in a free 30-min call.</p>
+      <div class="mt-6">
+        <a href="/booking" class="inline-flex items-center gap-3 px-8 py-4 btn-primary rounded-full font-semibold shadow-lg">
+          <i class="fa-solid fa-calendar-plus"></i> Book Free Consulting
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+      <div>
+        <h4 class="font-bold text-lg">Growsoft</h4>
+        <p class="mt-2 text-gray-400">Build your brand with confidence & creativity.</p>
+        <ul class="mt-4 text-sm text-gray-400 space-y-1">
+          <li><i class="fa-solid fa-location-dot mr-2 text-[var(--brand)]"></i> Ashulia & Banani, Dhaka, Bangladesh</li>
+          <li><i class="fa-solid fa-envelope mr-2 text-[var(--brand)]"></i> <a href="mailto:contact@thegrowsoft.com" class="hover:text-white">contact@thegrowsoft.com</a></li>
+          <li><i class="fa-solid fa-phone mr-2 text-[var(--brand)]"></i> +880 01603747235</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Services</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="/web-development" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Web Development</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Software Development</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> Digital Marketing</a></li>
+          <li><a href="/#services" class="hover:text-white"><i class="fa-solid fa-angle-right mr-2"></i> SEO</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Social Media</h5>
+        <div class="mt-3 flex gap-3">
+          <a href="https://www.facebook.com/thegrowsoft" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/thegrowsoft/" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/TheGrowSoft" class="p-3 bg-gray-800 rounded-md hover:bg-[var(--brand)]" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="font-semibold">Other Pages</h5>
+        <ul class="mt-3 text-sm text-gray-400 space-y-2">
+          <li><a href="/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="/booking" class="hover:text-white">Free Consulting</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 text-center text-sm text-gray-500">© <span id="year"></span> Growsoft — All rights reserved.</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      // Desktop submenu
+      document.querySelectorAll('.menu-group').forEach(group=>{
+        const btn = group.querySelector('button[aria-haspopup="true"]');
+        const menu = group.querySelector('.submenu'); if (!btn || !menu) return;
+        const open = ()=>{ menu.classList.add('open'); btn.setAttribute('aria-expanded','true'); };
+        const close = ()=>{ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); };
+        group.addEventListener('mouseenter', open);
+        group.addEventListener('mouseleave', close);
+        btn.addEventListener('focus', open);
+        menu.addEventListener('focusout', (e)=>{ if (!group.contains(e.relatedTarget)) close(); });
+        group.addEventListener('keydown', (e)=>{ if (e.key==='Escape'){ close(); btn.focus(); }});
+      });
+
+      // Mobile menu
+      const toggle = document.getElementById('mobileToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (toggle && menu){
+        toggle.addEventListener('click', ()=>{
+          const open = menu.classList.contains('hidden');
+          menu.classList.toggle('hidden');
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+      }
+      document.querySelectorAll('[data-acc]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const key = btn.getAttribute('data-acc');
+          const panel = document.querySelector(`[data-panel="${key}"]`);
+          if (!panel) return;
+          const isHidden = panel.classList.contains('hidden');
+          panel.classList.toggle('hidden');
+          btn.setAttribute('aria-expanded', String(isHidden));
+        });
+      });
+
+      // FAQ accordion
+      document.querySelectorAll('.accordion-item').forEach(item=>{
+        const btn = item.querySelector('button');
+        const content = item.querySelector('.accordion-content');
+        btn.addEventListener('click', ()=>{
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.accordion-item.open').forEach(x=>{
+            if (x!==item){
+              x.classList.remove('open');
+              x.querySelector('.accordion-content').style.maxHeight = null;
+              const icon = x.querySelector('button i'); if (icon){ icon.classList.remove('fa-minus'); icon.classList.add('fa-plus'); }
+              x.querySelector('button').setAttribute('aria-expanded','false');
+            }
+          });
+
+          if (isOpen){
+            item.classList.remove('open');
+            content.style.maxHeight = null;
+            const icon = btn.querySelector('i'); if (icon){ icon.classList.remove('fa-minus'); icon.classList.add('fa-plus'); }
+            btn.setAttribute('aria-expanded','false');
+          }else{
+            item.classList.add('open');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            const icon = btn.querySelector('i'); if (icon){ icon.classList.remove('fa-plus'); icon.classList.add('fa-minus'); }
+            btn.setAttribute('aria-expanded','true');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
